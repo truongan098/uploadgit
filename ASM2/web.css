@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Backup màu nền nếu ảnh nền không tải */
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Screenshot\ 2024-10-15\ 101509.png'); /* Thay thế đường dẫn ảnh nền */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Đặt ảnh nền ở phía sau */
+    opacity: 0.6; /* Độ trong suốt để làm mờ nền */
+}
+
+.container {
+    width: 80%;
+    max-width: 500px; /* Giảm kích thước chiều rộng container */
+    background-color: #F8F1E4;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.login-panel {
+    width: 100%;
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.login-panel .logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-panel form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.login-panel input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-panel button {
+    padding: 10px;
+    background-color: #f04775;
+    color: #F8F1E4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-panel button:hover {
+    background-color: #d13f63;
+}
+
+.login-panel .forgot-password {
+    margin-top: 10px;
+    color: #f04775;
+    text-decoration: none;
+}
+
+.login-panel .language-select {
+    margin-top: 20px;
+}
+
+.login-panel .security-badge {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.login-panel .security-badge img {
+    width: 100px;
+}
